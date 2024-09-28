@@ -1,0 +1,11 @@
+{
+  "TITLE": "Task Manager App",
+  "DASHBOARD": "Dashboard",
+  "PROJECTS": "Projects",
+  "TASKS": "Tasks",
+  "LOGOUT": "Logout",
+  "NO_TASKS": "No tasks available. Add a new task.",
+  "ADD_TASK": "Add Task",
+  "EDIT_TASK": "Edit Task",
+  "UPDATE_TASK": "Update Task"
+}

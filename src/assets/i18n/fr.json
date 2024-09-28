@@ -1,0 +1,11 @@
+{
+  "TITLE": "Application de Gestion de Tâches",
+  "DASHBOARD": "Tableau de bord",
+  "PROJECTS": "Projets",
+  "TASKS": "Tâches",
+  "LOGOUT": "Se déconnecter",
+  "NO_TASKS": "Aucune tâche disponible. Ajoutez une nouvelle tâche.",
+  "ADD_TASK": "Ajouter une tâche",
+  "EDIT_TASK": "Modifier la tâche",
+  "UPDATE_TASK": "Mettre à jour la tâche"
+}

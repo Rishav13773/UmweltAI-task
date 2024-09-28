@@ -1,0 +1,9 @@
+<app-navbar></app-navbar>
+<div class="dashboard">
+  <h2>All projects</h2>
+  <div *ngFor="let project of projects" class="project-card">
+    <h3>{{ project.name }}</h3>
+    <p>{{ project.description }}</p>
+    <button (click)="viewProjectDetails(project.id)">View Details</button>
+  </div>
+</div>

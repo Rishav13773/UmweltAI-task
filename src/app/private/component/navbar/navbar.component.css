@@ -1,0 +1,80 @@
+.navbar {
+  background-color: #007bff;
+  padding: 10px;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.navbar-brand a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.navbar-toggler {
+  font-size: 1.5rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+.navbar-links {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+/*For larger screens */
+/* .navbar-links {
+  display: flex;
+  gap: 15px;
+} */
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5px;
+  transition: background-color 0.3s;
+}
+
+.navbar-links a.active,
+.navbar-links a:hover {
+  background-color: #0056b3;
+  border-radius: 5px;
+}
+@media (max-width: 768px) {
+  .navbar-toggler {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none; /* Hidden by default on small screens */
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #007bff;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .navbar-links.active {
+    display: flex; /* Show the links when 'active' class is applied */
+  }
+
+  .navbar-links a {
+    padding: 10px;
+    border-top: 1px solid #0056b3;
+  }
+}
