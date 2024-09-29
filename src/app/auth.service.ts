@@ -4,21 +4,17 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class AuthService {
-  private isAuthenticated = false;
   private readonly tokenKey = 'authToken';
 
-  constructor() {
-    this.isAuthenticated = !!localStorage.getItem(this.tokenKey); // checking if the token exist
-  }
+  constructor() {}
 
   login(username: string, password: string): boolean {
     const hardcodedUsername = 'admin';
     const hardcodedPassword = 'password123';
 
     if (username === hardcodedUsername && password === hardcodedPassword) {
-      const token = 'randomNewtoken123'; //token
-      localStorage.setItem(this.tokenKey, token); // Storing token in local storage
-      this.isAuthenticated = true;
+      const token = 'randomNewtoken123';
+      localStorage.setItem(this.tokenKey, token); // Storing token in localStorage
       return true;
     }
     return false;
@@ -26,11 +22,10 @@ export class AuthService {
 
   logout() {
     localStorage.removeItem(this.tokenKey); // Remove token from localStorage
-    this.isAuthenticated = false;
   }
 
   isLoggedIn(): boolean {
-    return this.isAuthenticated;
+    return !!localStorage.getItem(this.tokenKey);
   }
 
   getToken(): string | null {
