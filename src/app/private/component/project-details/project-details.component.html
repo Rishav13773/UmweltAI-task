@@ -6,12 +6,38 @@
 
   <h2>Tasks</h2>
 
+  <!-- Sorting and Filtering -->
+  <div class="task-controls">
+    <div class="sortBy-container">
+      <label for="sortBy">Sort by:</label>
+      <select id="sortBy" [(ngModel)]="sortOption" (change)="sortTasks()">
+        <option value="priority">Priority</option>
+        <option value="deadline">Deadline</option>
+      </select>
+    </div>
+
+    <div class="filterByPriority-container">
+      <label for="filterByPriority">Filter by Priority:</label>
+      <select
+        id="filterByPriority"
+        [(ngModel)]="filterOption"
+        (change)="filterTasks()"
+      >
+        <option value="all">All</option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Task List -->
   <div class="tasks-list">
-    <div *ngIf="project?.tasks?.length === 0" class="no-tasks">
+    <div *ngIf="filteredTasks.length === 0" class="no-tasks">
       No tasks available. Add a new task.
     </div>
 
-    <div class="task-card" *ngFor="let task of project?.tasks">
+    <div class="task-card" *ngFor="let task of filteredTasks">
       <div class="task-info">
         <h3>{{ task.name }}</h3>
         <p>Priority: {{ task.priority }}</p>

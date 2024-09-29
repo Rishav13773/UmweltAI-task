@@ -19,9 +19,8 @@ export class HomeComponent {
 
   constructor(private router: Router) {}
 
-  // Method to navigate to project details, implement this in the template
   viewProjectDetails(id: number) {
     console.log('Navigating to project', id);
-    this.router.navigate([`project/${id}`]); // Use the actual id value here
+    this.router.navigate([`project/${id}`]);
   }
 }

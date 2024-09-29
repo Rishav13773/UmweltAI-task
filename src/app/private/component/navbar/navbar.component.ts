@@ -9,16 +9,16 @@ import { Router } from '@angular/router';
   imports: [],
 })
 export class NavbarComponent {
-  menuOpen = false; // Tracks if the menu is open or closed
+  menuOpen = false;
 
   constructor(private router: Router) {}
 
   toggleMenu() {
-    this.menuOpen = !this.menuOpen; // Toggle the menu visibility
+    this.menuOpen = !this.menuOpen;
   }
 
   logout() {
-    localStorage.removeItem('authToken'); // Clear token on logout
-    this.router.navigate(['']); // Redirect to login page
+    localStorage.removeItem('authToken');
+    this.router.navigate(['']);
   }
 }

@@ -9,7 +9,7 @@ import { AuthService } from '../auth.service';
   standalone: true,
   imports: [FormsModule, NgIf],
   templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.css'], // Corrected the property name to 'styleUrls'
+  styleUrls: ['./auth.component.css'],
 })
 export class AuthComponent {
   username: string = '';

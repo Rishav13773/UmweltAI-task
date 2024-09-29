@@ -19,12 +19,10 @@ export interface Project {
   providedIn: 'root',
 })
 export class ProjectService {
-  // BehaviorSubject for storing and managing the state of projects
   private projects = new BehaviorSubject<Project[]>([]);
   projects$ = this.projects.asObservable();
 
   constructor() {
-    // Initialize with some demo projects (optional)
     this.projects.next([
       { id: 1, name: 'Project 1', description: 'This is project 1', tasks: [] },
       { id: 2, name: 'Project 2', description: 'This is project 2', tasks: [] },
@@ -44,7 +42,7 @@ export class ProjectService {
   }
 
   // Get a project by ID
-  getProjectById(projectId: number): Project | undefined {
+  getProjectById(projectId: any): Project | undefined {
     return this.projects.getValue().find((project) => project.id === projectId);
   }
 

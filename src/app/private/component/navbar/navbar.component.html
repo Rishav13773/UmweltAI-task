@@ -1,12 +1,12 @@
 <nav class="navbar">
   <div class="navbar-container">
     <div class="navbar-brand">
-      <a routerLink="/home">Task Manager app</a>
+      <a routerLink="/home">Task Manager App</a>
     </div>
 
     <button class="navbar-toggler" (click)="toggleMenu()">&#9776;</button>
 
-    <div class="navbar-links">
+    <div class="navbar-links" [class.active]="menuOpen">
       <a (click)="logout()">Logout</a>
     </div>
   </div>

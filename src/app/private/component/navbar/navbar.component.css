@@ -55,10 +55,11 @@
 @media (max-width: 768px) {
   .navbar-toggler {
     display: block;
+    margin-right: 15px;
   }
 
   .navbar-links {
-    display: none; /* Hidden by default on small screens */
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 50px;
@@ -70,7 +71,7 @@
   }
 
   .navbar-links.active {
-    display: flex; /* Show the links when 'active' class is applied */
+    display: flex;
   }
 
   .navbar-links a {

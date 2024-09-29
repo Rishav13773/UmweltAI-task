@@ -97,3 +97,27 @@ button[type="button"] {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.task-controls {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#sortBy {
+  margin-left: 5px;
+  margin-right: 15px;
+}
+
+#filterByPriority {
+  margin-left: 5px;
+}
+
+@media (max-width: 768px) {
+  .task-controls {
+    display: block;
+  }
+
+  .sortBy-container {
+    margin-bottom: 10px;
+  }
+}

@@ -8,7 +8,7 @@ export class AuthService {
   private readonly tokenKey = 'authToken';
 
   constructor() {
-    this.isAuthenticated = !!localStorage.getItem(this.tokenKey); // checking if the token exist here
+    this.isAuthenticated = !!localStorage.getItem(this.tokenKey); // checking if the token exist
   }
 
   login(username: string, password: string): boolean {
